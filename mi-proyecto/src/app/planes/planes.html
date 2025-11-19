@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <label for="selectplan">Selecciona un plan</label>
+        <select name="selectplan" id="" [(ngModel)]="plan">
+            <option value="1">Plan Basico</option>
+            <option value="2">Plan Estandar</option>
+            <option value="3">Plan Premium</option>
+        </select>
+    </div>
+    <div class="row">
+        <div [ngSwitch]="plan">
+            <span *ngSwitchCase="'1'">
+                <p>Este plan cuenta con informacion relevante aunque limitada $20000 </p>
+            </span>
+            <span *ngSwitchCase="'2'">
+                <p>Este plan ya tiene integrada toda la informacion a excepcion de la exclusiva $50000 </p>
+            </span>
+            <span *ngSwitchCase="'3'">
+                <p>Este plan te dara muchas ventajas a comparacion de los otros $70000</p>
+            </span>
+            <span *ngSwitchDefault>Porfavor selecciona alguna de las opciones validas</span>
+        </div>
+    </div>
+</div>

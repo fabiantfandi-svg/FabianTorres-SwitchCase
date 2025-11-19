@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <input type="text" [(ngModel)]="temper"placeholder="Ingrese la temperatura">
+        <button class="btn btn-primary mt-3" (click)="evaluarClima()">Evaluar clima</button>
+        <div class="mt-4" [ngSwitch]="estadoClima">
+            <span *ngSwitchCase="'caliente'">El clima está Caliente</span>
+            <span *ngSwitchCase="'templado'">El clima está Templado</span>
+            <span *ngSwitchCase="'frio'">El clima está Frío</span>
+            <span *ngSwitchDefault class="text-muted">Temperatura no válida</span>
+        </div>
+    </div>
+</div>

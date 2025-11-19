@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <label for="usu">Selecciona un tipo de usuario</label>
+        <select name="usu" id="" [(ngModel)]="type">
+            <option value="a">Administrador</option>
+            <option value="b">Editor</option>
+            <option value="c">Lector</option>
+        </select>
+    </div>
+    <div class="row">
+        <div [ngSwitch]="type">
+            <span *ngSwitchCase="'a'">
+                <p>Acceso completo a todas las funciones. </p>
+            </span>
+            <span *ngSwitchCase="'b'">
+                <p>Puede editar contenido, pero no gestionar usuarios.</p>
+            </span>
+            <span *ngSwitchCase="'c'">
+                <p>Solo puede ver contenido.</p>
+            </span>
+            <span *ngSwitchDefault>Porfavor selecciona alguna de las opciones validas</span>
+        </div>
+    </div>
+</div>
