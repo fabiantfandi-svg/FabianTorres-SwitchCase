@@ -7,13 +7,15 @@ import { App } from './app';
 import { Planes } from './planes/planes';
 import { Temperatura } from './temperatura/temperatura';
 import { Usuario } from './usuario/usuario';
+import { ContactForm } from './contact-form/contact-form';
 
 @NgModule({
   declarations: [
     App,
     Planes,
     Temperatura,
-    Usuario
+    Usuario,
+    ContactForm
   ],
   imports: [
     BrowserModule,
